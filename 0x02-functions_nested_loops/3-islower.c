@@ -2,7 +2,7 @@
 
 /**
  * _islower - entry point
- * 
+ * @c: paramtre
  * Return: 1  or 0
  */
 

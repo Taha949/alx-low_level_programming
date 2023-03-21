@@ -3,8 +3,8 @@
 /**
  * _isalpha - Entry point
  *
- * @c: the character 
- * Return: 1 0 
+ * @c: the character
+ * Return: 1 0
  */
 
 int _isalpha(int c)

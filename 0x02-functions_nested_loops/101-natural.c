@@ -1,26 +1,20 @@
 #include <stdio.h>
 
 /**
- *main - entry point
+ * main - entry point
  *
- * Return: always (0)
+ * Return: always 0
  */
 
 int main(void)
 {
-	unsigned long a = 0, b = 1, sum;
-	float SUM;
+	int i, sum = 0;
 
-	while (1)
+	for (i = 0; i < 1024; i++)
 	{
-		sum = a + b;
-		if (sum > 4000000)
-			break;
-		if ((sum % 2) == 0)
-			SUM += sum;
-		a = b;
-		b = sum;
+		if ((i % 3) == 0 || (i % 5) == 0)
+			sum += i;
 	}
-	printf("%.0f\n", SUM);
+	printf("%d\n", sum);
 	return (0);
 }

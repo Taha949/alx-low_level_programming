@@ -1,27 +1,15 @@
 #include <stdio.h>
 
-/**
- * main - Entry point
- * Return: Always 0.
- */
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
+  int n;
+  int a[5];
+  int *p;
 
-	for (count = 0; count < 50; count++)
-	{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
-
-		fib1 = fib2;
-		fib2 = sum;
-
-		if (count == 49)
-			printf("\n");
-		else
-			printf(", ");
-	}
-
-	return (0);
+  a[2] = 1024;
+  p = &n;
+  *(p + 5) = 98;
+  printf("a[2] = %d\n", a[2]);
+  return (0);
 }
+

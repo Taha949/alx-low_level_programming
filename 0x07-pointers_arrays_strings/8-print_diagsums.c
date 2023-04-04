@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_diagsums - prints the sums of the two diagonals of a square matrix
+ * print_diagsums - entry point
  * @a: pointer
  * @size: int
  * Return: rien
@@ -12,7 +12,7 @@ void print_diagsums(int *a, int size)
 
 	for (i = 0; i < size; i++)
 	{
-		p = i + (i * size) ;
+		p = i + (i * size);
 		l = l + *(a + p);
 	}
 	for (j = 0; j < size; j++)

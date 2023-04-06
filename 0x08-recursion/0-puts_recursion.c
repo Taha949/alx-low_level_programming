@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _puts_recursion - entry point 
+ * _puts_recursion - entry point
  * @s: string (the parametre)
  * Return: void
  */

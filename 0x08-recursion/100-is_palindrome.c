@@ -4,6 +4,7 @@
  * @s: char
  * Return: int
  */
+
 int _strlen_recursion(char *s)
 {
 	if (s[0] != '\0')
@@ -11,6 +12,7 @@ int _strlen_recursion(char *s)
 
 	return (0);
 }
+
 /**
  * pal_checker - entry point
  * @s: char
@@ -18,6 +20,7 @@ int _strlen_recursion(char *s)
  * @j: int
  * Return: 1 or 0
  */
+
 int pal_checker(char *s, int i, int j)
 {
 	if (s[i] == s[j])
@@ -30,11 +33,13 @@ int pal_checker(char *s, int i, int j)
 	else
 		return (0);
 }
+
 /**
  * is_palindrome - entry point
  * @s: char
- * Return: 1 or 0 
+ * Return: 1 or 0
  */
+
 int is_palindrome(char *s)
 {
 	return (pal_checker(s, 0, _strlen_recursion(s) - 1));

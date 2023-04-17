@@ -1,18 +1,20 @@
 #include <stdlib.h>
-	#include "dog.h"
+#include "dog.h"
 
 
-	/**
-	 * free_dog - entry point
-	 * @d: struct
-	 */
-	void free_dog(dog_t *d)
+/**
+ * free_dog - entry point
+ * Description: printing
+ * @d: struct
+ *
+ */
+void free_dog(dog_t *d)
+{
+	if (d)
 	{
-		if (d)
-		{
-			free(d->name);
-			free(d->owner);
-			free(d);
-		}
+		free(d->name);
+		free(d->owner);
+		free(d);
 	}
+}
 

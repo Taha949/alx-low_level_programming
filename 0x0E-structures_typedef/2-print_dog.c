@@ -1,17 +1,16 @@
 #include <stdio.h>
-	#include <stdlib.h>
-	#include "dog.h"
+#include <stdlib.h>
+#include "dog.h"
 
 
-	/**
-	 * print_dog - entry point
-	 * @d: a struct
-	 */
-	void print_dog(struct dog *d)
-	{
-		if (d == NULL)
-			return;
-
+/**
+ * print_dog - entry point
+ * @d: struct
+ */
+void print_dog(struct dog *d)
+{
+	if (d == NULL)
+		return;
 
 		if (d->name == NULL)
 			d->name = "(nil)";

@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * binary_to_uint - entry point
@@ -17,7 +18,6 @@ unsigned int binary_to_uint(const char *b)
 
     while (b[len] != '\0')
         len++;
-
     for (int i = 0; i < len; i++)
     {
         if (b[i] == '1')

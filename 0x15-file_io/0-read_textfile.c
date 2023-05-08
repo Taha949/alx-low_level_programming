@@ -10,33 +10,28 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	FILE *fp;
-	char *buf;
-	ssize_t nread;
-	ssize_t nprinted;
+
+	FILE *file;
+	size_t read_size;
+	char *buffer;
+	ssize_t write_size;
 
 	if (filename == NULL)
 		return (0);
 
-	fp = fopen(filename, "r");
-	if (fp == NULL)
+	file = fopen(filename, "r");
+	if (file == NULL)
 		return (0);
 
-	buf = malloc(sizeof(char) * (letters + 1));
-	if (buf == NULL)
-	{
-		fclose(fp);
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
 		return (0);
-	}
 
-	nread = fread(buf, sizeof(char), letters, fp);
-	buf[nread] = '\0';
+	read_size = fread(buffer, sizeof(char), letters, file);
+	write_size = fwrite(buffer, sizeof(char), read_size, stdout);
 
-	nprinted = fwrite(buf, sizeof(char), nread, stdout);
+	fclose(file);
+	free(buffer);
 
-	free(buf);
-	fclose(fp);
-
-	return (nprinted);
+	return (write_size);
 }
-

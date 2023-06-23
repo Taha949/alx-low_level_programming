@@ -1,0 +1,2 @@
+ -shared -o libdynamic.so *.o
+nm -D libdynamic.so
